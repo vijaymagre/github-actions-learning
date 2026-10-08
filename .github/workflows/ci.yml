@@ -1,4 +1,4 @@
-name: My First GitHub Actions
+name: GitHub Actions Learning
 
 on:
   push:
@@ -6,12 +6,21 @@ on:
       - main
 
 jobs:
-  hello:
+  learning:
     runs-on: ubuntu-latest
 
     steps:
       - name: Checkout Code
         uses: actions/checkout@v4
 
+      - name: Show Current Directory
+        run: pwd
+
+      - name: List Files
+        run: ls -la
+
+      - name: Check Linux Version
+        run: uname -a
+
       - name: Hello Message
-        run: echo "Hello Vijay! GitHub Actions is Working!"
+        run: echo "Hello Vijay! I am learning GitHub Actions."
